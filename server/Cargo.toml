@@ -1,0 +1,7 @@
+[package]
+authors = [ "Erik Reinert" ]
+edition = "2018"
+name = "tasks-server"
+version = "0.1.0"
+
+[dependencies]

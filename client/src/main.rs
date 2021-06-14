@@ -21,7 +21,7 @@ fn main() {
 
     if let Some(ref matches) = matches.subcommand_matches("new") {
         if matches.is_present("pomodoro") {
-            println!("lets set a custom pomodoro")
+            println!("lets set a custom task")
         }
     }
 }
