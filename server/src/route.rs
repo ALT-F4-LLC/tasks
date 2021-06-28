@@ -1,7 +1,6 @@
-use crate::schema::Task;
+use crate::models::Task;
 use rocket::serde::json::Json;
 use rocket::serde::Deserialize;
-use uuid::Uuid;
 
 #[derive(Deserialize)]
 #[serde(crate = "rocket::serde")]
@@ -11,8 +10,10 @@ pub struct CreateTaskOptions<'r> {
 
 #[post("/task", format = "json", data = "<task>")]
 pub fn create_task(task: Json<CreateTaskOptions<'_>>) -> Json<Task> {
+    // TODO : insert data storage here
+
     Json(Task {
-        _id: Uuid::new_v4(),
+        _id: i64::from(9292),
         description: String::from(task.description),
     })
 }
